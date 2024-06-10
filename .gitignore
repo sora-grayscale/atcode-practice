@@ -164,3 +164,4 @@ dkms.conf
 *.out
 *.app
 
+venv/
