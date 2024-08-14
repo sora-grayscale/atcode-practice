@@ -16,6 +16,7 @@ if [ "$#" -eq 1 ]; then
         # ディレクトリの作成
         mkdir -p "abc${NUMBER}_${ALPHABET}"
         cd "abc${NUMBER}_${ALPHABET}"
+        touch main.cpp
 
         # URL の生成
         URL="https://atcoder.jp/contests/abc$NUMBER/tasks/abc${NUMBER}_$ALPHABET"
@@ -52,6 +53,7 @@ else
     DIR="abc$NUMBER/abc${NUMBER}_$ALPHABET"
     mkdir -p "$DIR"
     cd "$DIR"
+    touch main.cpp
 
     # URL の生成
     URL="https://atcoder.jp/contests/abc$NUMBER/tasks/abc${NUMBER}_$ALPHABET"
