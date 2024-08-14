@@ -1,9 +1,12 @@
 #include <iostream>
 #include <vector>
-#define fast std::ios::sync_with_stdio(0); std::cin.tie(0); std::cout.tie(0);
-#include <iomanip>
+#define fast                                                                   \
+  std::ios::sync_with_stdio(0);                                                \
+  std::cin.tie(0);                                                             \
+  std::cout.tie(0);
 #include <algorithm>
 #include <cmath>
+#include <iomanip>
 
 int main() {
   std::string str;
@@ -14,8 +17,7 @@ int main() {
         std::cout << "No" << std::endl;
         return 0;
       }
-    }
-    else if (str[i] < 'a' || str[i] > 'z') {
+    } else if (str[i] < 'a' || str[i] > 'z') {
       std::cout << "No" << std::endl;
       return 0;
     }
