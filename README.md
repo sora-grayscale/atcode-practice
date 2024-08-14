@@ -11,7 +11,7 @@ sh bin/ojs.sh FILENAME
 # atcode
 alias ojd="sh PATH/atcode-practice/bin/ojd.sh"
 alias ojs="sh PATH/atcode-practice/bin/ojs.sh"
-alias ojt="oj t"
+alias ojt="gw main.cpp && oj t"
 alias cdat="cd PATH/atcode-practice/"
 function atcode(){
   cdat
