@@ -8,4 +8,24 @@
 #include <cmath>
 #include <iomanip>
 
-int main() { return 0; }
+int main() {
+  int n, m;
+
+  std::cin >> n >> m;
+  for (int i = 0; i < n; i++) {
+    int tmp;
+    std::cin >> tmp;
+
+    m -= tmp;
+    if (m == 0) {
+      std::cout << i + 1 << std::endl;
+      return 0;
+    }
+    if (m < 0) {
+      std::cout << i << std::endl;
+      return 0;
+    }
+  }
+  std::cout << n << std::endl;
+  return 0;
+}
