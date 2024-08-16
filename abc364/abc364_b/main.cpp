@@ -24,19 +24,15 @@ size_t check_sharp(const size_t &x, const size_t &y,
 void map_move(size_t &pos_x, size_t &pos_y, const char &move,
               const std::vector<std::string> &map) {
   // L, R, U, D を判定する
-  size_t to_x = 0, to_y = 0;
+  size_t to_x = pos_x, to_y = pos_y;
   if (move == 'L') {
-    to_x = pos_x;
     to_y = pos_y - 1;
   } else if (move == 'R') {
-    to_x = pos_x;
     to_y = pos_y + 1;
   } else if (move == 'U') {
     to_x = pos_x - 1;
-    to_y = pos_y;
   } else if (move == 'D') {
     to_x = pos_x + 1;
-    to_y = pos_y;
   }
   // その位置を見に行く
   if (check_sharp(to_x, to_y, map)) {
