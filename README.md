@@ -1,5 +1,8 @@
 # atcode-practice
 
+[AtCoder contest table](https://kenkoooo.com/atcoder/#/table/)
+どの問題をといたかの確認ができる
+
 ```sh
 sh bin/ojd.sh NUMBER ALPHABET
 ojt # alias ojt="oj t"
