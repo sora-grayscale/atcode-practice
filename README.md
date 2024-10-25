@@ -1,6 +1,7 @@
 # atcode-practice
 
 [AtCoder contest table](https://kenkoooo.com/atcoder/#/table/)
+[直接自分の見れるリンク](https://kenkoooo.com/atcoder/#/table/RJU4bFu5mbRwqgfP)
 どの問題をといたかの確認ができる
 user id:
 `RJU4bFu5mbRwqgfP`
