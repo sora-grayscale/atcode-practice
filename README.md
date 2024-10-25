@@ -2,6 +2,8 @@
 
 [AtCoder contest table](https://kenkoooo.com/atcoder/#/table/)
 どの問題をといたかの確認ができる
+user id:
+`RJU4bFu5mbRwqgfP`
 
 ```sh
 sh bin/ojd.sh NUMBER ALPHABET
