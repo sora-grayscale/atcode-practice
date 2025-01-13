@@ -1,5 +1,4 @@
 # AtCoder Practice
-
 ## リンク
 - [AtCoder Contest Table](https://kenkoooo.com/atcoder/#/table/)
 - [自分のコンテスト結果を直接見るリンク](https://kenkoooo.com/atcoder/#/table/RJU4bFu5mbRwqgfP)
