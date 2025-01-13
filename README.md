@@ -1,38 +1,80 @@
-# atcode-practice
+# AtCoder Practice
 
-[AtCoder contest table](https://kenkoooo.com/atcoder/#/table/)
-[直接自分の見れるリンク](https://kenkoooo.com/atcoder/#/table/RJU4bFu5mbRwqgfP)
-どの問題をといたかの確認ができる
-user id:
+## リンク
+- [AtCoder Contest Table](https://kenkoooo.com/atcoder/#/table/)
+- [自分のコンテスト結果を直接見るリンク](https://kenkoooo.com/atcoder/#/table/RJU4bFu5mbRwqgfP)
+このリンクを使うと、どの問題を解いたかを確認できます。
+
+**User ID:**
 `RJU4bFu5mbRwqgfP`
 
-## usage of bin scripts
-### ojd to down load and create dir
+## 開始方法
+
+1. **ojのインストール**
+   [ojのインストール手順](https://github.com/online-judge-tools/oj/blob/master/README.ja.md)を参照してください。
+
+2. **仮想環境の作成**
+   以下のコマンドを実行して仮想環境を作成します。
+   ```sh
+   python3 -m venv venv
+   source venv/bin/activate
+   ```
+
+3. **依存関係のインストール**
+   次のコマンドで必要なパッケージをインストールします。
+   ```sh
+   pip install -r requirements.txt
+   ```
+
+4. **AtCoderの開始**
+   以下のコマンドでAtCoderを開始します。
+   ```sh
+   atcode  # shell_profileを同期し、binへのパスをエクスポートしている場合
+   ```
+
+5. **テストの実行**
+   以下のコマンドでテストを簡単に実行できます。
+   ```sh
+   ojt  # 下記のエイリアスを使用
+   ```
+
+6. **提出**
+   以下のコマンドでファイルを提出します。
+   ```sh
+   ojs  # shell_profileを同期し、binへのパスをエクスポートしている場合
+   ```
+
+## binスクリプトの使い方
+
+### ojd: ダウンロードとディレクトリ作成
 ```sh
 sh bin/ojd.sh NUMBER ALPHABET
 ```
 
-### ojs to submit file
+### ojs: ファイルの提出
 ```sh
 sh bin/ojs.sh FILENAME
 ```
 
-## additional alias fo atcode
+## AtCoder用の追加エイリアス
 ```sh
-# alias
-# atcode
+# エイリアス設定
 alias ojd="sh PATH/atcode-practice/bin/ojd.sh"
 alias ojt="gw main.cpp && oj t"
 alias cdat="cd PATH/atcode-practice/"
 
-# optional
+# オプション
 alias ojs="sh PATH/atcode-practice/bin/ojs.sh"
-function atcode(){
+
+function atcode() {
   cdat
   sh PATH/atcode-practice/bin/ojd.sh $1 $2
   cd abc$1/abc$1\_$2
 }
 ```
 
-### for me
-ojs, atcodeともに`~/Sync/shell_profile/bin/`にshell scriptがあるので`export PATH=$PATH:~/Sync/shell_profile/bin/`をzshrcに書けばいい感じのが使えます
+## 私の設定
+`ojs`と`atcode`の両方のシェルスクリプトは`~/Sync/shell_profile/bin/`にあります。以下の行を`~/.zshrc`に追加することで、簡単に使えるようになります。
+```sh
+export PATH=$PATH:~/Sync/shell_profile/bin/
+```
