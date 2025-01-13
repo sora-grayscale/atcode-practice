@@ -11,13 +11,16 @@
 ## 開始方法
 
 1. **ojのインストール/ログイン**
+   
    [ojのインストール手順](https://github.com/online-judge-tools/oj/blob/master/README.ja.md)を参照してください。
+   
    提出の際にログインしろって下記のようなフォーマットで聞かれるのでそのときにログインするのが簡単
    ```sh
    oj login URL
    ```
 
 2. **仮想環境の作成**
+   
    以下のコマンドを実行して仮想環境を作成します。
    ```sh
    python3 -m venv venv
@@ -25,24 +28,28 @@
    ```
 
 3. **依存関係のインストール**
+   
    次のコマンドで必要なパッケージをインストールします。
    ```sh
    pip install -r requirements.txt
    ```
 
 4. **AtCoderの開始**
+   
    以下のコマンドでAtCoderを開始します。
    ```sh
    atcode  # shell_profileを同期し、binへのパスをエクスポートしている場合
    ```
 
 5. **テストの実行**
+   
    以下のコマンドでテストを簡単に実行できます。
    ```sh
    ojt  # 下記のエイリアスを使用
    ```
 
 6. **提出**
+   
    以下のコマンドでファイルを提出します。
    ```sh
    ojs  # shell_profileを同期し、binへのパスをエクスポートしている場合
