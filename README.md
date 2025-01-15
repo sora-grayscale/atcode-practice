@@ -84,4 +84,6 @@ function atcode() {
 ```
 
 ## 私の設定
-`ojs`と`atcode`の両方のシェルスクリプトは[local_bin](https://forgejo.hatsuyoake.com/susui/atcode-practice)にあります。
+`ojs`と`atcode`の両方のシェルスクリプトは[local_bin](https://forgejo.hatsuyoake.com/susui/local_bin)にあります。
+`ojs`はlocal_binの方を使ってる
+ojdはlocal_binのatcodeに内包されてるから使ってない
