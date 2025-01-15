@@ -84,7 +84,4 @@ function atcode() {
 ```
 
 ## 私の設定
-`ojs`と`atcode`の両方のシェルスクリプトは`~/Sync/shell_profile/bin/`にあります。以下の行を`~/.zshrc`に追加することで、簡単に使えるようになります。
-```sh
-export PATH=$PATH:~/Sync/shell_profile/bin/
-```
+`ojs`と`atcode`の両方のシェルスクリプトは[local_bin](https://forgejo.hatsuyoake.com/susui/atcode-practice)にあります。
