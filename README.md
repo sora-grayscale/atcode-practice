@@ -76,9 +76,17 @@ alias ojt="gw main.cpp && oj t && rmxx"
 alias ojs="sh $ATCODE_PATH/bin/ojs.sh"
 
 function atcode() {
+  if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 NUMBER ALPHABET"
+    return 1
+  fi
   cdat
-  sh $ATCODE_PATH/bin/ojd.sh $1 $2
-  cd abc$1/abc$1\_$2
+  sh "$ATCODE_PATH/bin/ojd.sh" "$1" "$2"
+  if [ $? -eq 1 ]; then
+    echo "ojd.sh failed, not changing directory."
+    return 1
+  fi
+  cd "abc$1/abc$1_$2"
 }
 ```
 local_binのは使わないことにした
