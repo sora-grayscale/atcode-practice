@@ -69,21 +69,16 @@ sh bin/ojs.sh FILENAME
 ## AtCoder用の追加エイリアス
 ```sh
 # エイリアス設定
-alias ojd="sh PATH/atcode-practice/bin/ojd.sh"
-alias ojt="gw main.cpp && oj t"
-alias cdat="cd PATH/atcode-practice/"
-
-# オプション
-alias ojs="sh PATH/atcode-practice/bin/ojs.sh"
+export ATCODE_PATH=PATH
+alias cdat="cd $ATCODE_PATH/"
+alias ojd="sh $ATCODE_PATH/bin/ojd.sh"
+alias ojt="gw main.cpp && oj t && rmxx"
+alias ojs="sh $ATCODE_PATH/bin/ojs.sh"
 
 function atcode() {
   cdat
-  sh PATH/atcode-practice/bin/ojd.sh $1 $2
+  sh $ATCODE_PATH/bin/ojd.sh $1 $2
   cd abc$1/abc$1\_$2
 }
 ```
-
-## 私の設定
-`ojs`と`atcode`の両方のシェルスクリプトは[local_bin](https://forgejo.hatsuyoake.com/susui/local_bin)にあります。
-`ojs`はlocal_binの方を使ってる
-ojdはlocal_binのatcodeに内包されてるから使ってない
+local_binのは使わないことにした
