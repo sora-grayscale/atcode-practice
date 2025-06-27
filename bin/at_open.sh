@@ -23,7 +23,7 @@ fi
 FILENAME=$1
 
 # URL の生成
-URL="https://atcoder.jp/contests/abc$NUMBER/tasks/abc${NUMBER}_$ALPHABET"
+URL="https://atcoder.jp/contests/abc$NUMBER/submit?taskScreenName=abc${NUMBER}_$ALPHABET"
 
 open "$URL"
 
