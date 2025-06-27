@@ -68,14 +68,19 @@ sh bin/ojs.sh FILENAME
 
 ## AtCoder用の追加エイリアス
 ```sh
-# atcode
-alias esource="source venv/bin/activate"
-alias atsource="source ~/Desktop/dev/atcode-practice/venv/bin/activate"
-alias cdat="cd ~/Desktop/dev/atcode-practice/"
-alias ojd="sh ~/Desktop/dev/atcode-practice/bin/ojd.sh"
-alias ojs="sh ~/Desktop/dev/atcode-practice/bin/ojs.sh"
+# AtCoder用の共通パスを定義
+ATCODE_PATH=path/to/atcoder
+ATCODE_ENV_PATH="$ATCODE_PATH/venv/bin/activate"
+ATCODE_BIN_PATH="$ATCODE_PATH/bin"
+
+## AtCoder用の追加エイリアス
+alias atsource="source $ATCODE_ENV_PATH"
+alias cdat="cd $ATCODE_PATH"
+alias ojd="sh $ATCODE_BIN_PATH/ojd.sh"
+alias ojs="sh $ATCODE_BIN_PATH/ojs.sh"
 alias ojt="gw main.cpp && oj t && rm ./a.out"
-alias atopen="sh ~/Desktop/dev/atcode-practice/bin/at_open.sh"
+alias atopen="sh $ATCODE_BIN_PATH/at_open.sh"
+
 function atcode(){
   cdat
   ojd $1 $2
