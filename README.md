@@ -68,25 +68,18 @@ sh bin/ojs.sh FILENAME
 
 ## AtCoder用の追加エイリアス
 ```sh
-# エイリアス設定
-export ATCODE_PATH=PATH
-alias cdat="cd $ATCODE_PATH/"
-alias ojd="sh $ATCODE_PATH/bin/ojd.sh"
-alias ojt="gw main.cpp && oj t && rmxx"
-alias ojs="sh $ATCODE_PATH/bin/ojs.sh"
-
-function atcode() {
-  if [ "$#" -ne 2 ]; then
-    echo "Usage: $0 NUMBER ALPHABET"
-    return 1
-  fi
+# atcode
+alias esource="source venv/bin/activate"
+alias atsource="source ~/Desktop/dev/atcode-practice/venv/bin/activate"
+alias cdat="cd ~/Desktop/dev/atcode-practice/"
+alias ojd="sh ~/Desktop/dev/atcode-practice/bin/ojd.sh"
+alias ojs="sh ~/Desktop/dev/atcode-practice/bin/ojs.sh"
+alias ojt="gw main.cpp && oj t && rm ./a.out"
+alias atopen="sh ~/Desktop/dev/atcode-practice/bin/at_open.sh"
+function atcode(){
   cdat
-  sh "$ATCODE_PATH/bin/ojd.sh" "$1" "$2"
-  if [ $? -eq 1 ]; then
-    echo "ojd.sh failed, not changing directory."
-    return 1
-  fi
-  cd "abc$1/abc$1_$2"
+  ojd $1 $2
+  cd abc$1/abc$1\_$2
 }
 ```
 local_binのは使わないことにした
