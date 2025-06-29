@@ -11,19 +11,22 @@
 
 int main() {
   std::string numbers;
-  char target = '0';
-  size_t count = 0;
-  size_t results = 0;
+  size_t results = 0, i = 0;
 
   std::cin >> numbers;
-  count = std::count(numbers.begin(), numbers.end(), target);
-  results = numbers.size();
-  if (count == 0) {
-    std::cout << results << std::endl;
-    return (0);
+  while (i < numbers.size()) {
+    if (numbers.at(i) == '0') {
+      size_t zeroCount = 0;
+      while (i < numbers.size() && numbers.at(i) == '0') {
+        zeroCount++;
+        i++;
+      }
+      results += (zeroCount + 1) / 2;
+    } else {
+      results++;
+      i++;
+    }
   }
-
-  results -= count / 2;
   std::cout << results << std::endl;
   return (0);
 }
