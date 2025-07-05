@@ -11,21 +11,20 @@
 #include <utility>
 
 int main() {
-  float n, first, second, r;
+  int n;
 
-  std::cin >> n >> first >> second;
+  std::cin >> n;
+  std::vector<long long> a(n);
+  for (int i = 0; i < n; i++) {
+    std::cin >> a.at(i);
+  }
 
-  r = second / first;
-
-  for (int i = 2; i < n; i++) {
-    float tmp;
-    std::cin >> tmp;
-    if (pow(r, i) * first != tmp) {
+  for (int i = 1; i < n - 1; i++) {
+    if (a.at(i) * a.at(i) != a.at(i - 1) * a.at(i + 1)) {
       std::cout << "No" << std::endl;
-      return (0);
+      return 0;
     }
-    second = tmp;
   }
   std::cout << "Yes" << std::endl;
-  return (0);
+  return 0;
 }
