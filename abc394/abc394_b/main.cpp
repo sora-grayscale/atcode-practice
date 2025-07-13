@@ -1,37 +1,31 @@
-#include <iostream>
-#include <set>
-#include <vector>
-#define fast                                                                   \
-  std::ios::sync_with_stdio(0);                                                \
-  std::cin.tie(0);                                                             \
-  std::cout.tie(0);
 #include <algorithm>
-#include <cmath>
-#include <iomanip>
-#include <utility>
-
-bool compareBySize(const std::pair<std::string, size_t> &a,
-                   const std::pair<std::string, size_t> &b) {
-  return a.second < b.second;
-}
+#include <iostream>
+#include <string>
+#include <vector>
 
 int main() {
-  size_t n;
+  int n;
+  std::vector<std::string> s;
 
   std::cin >> n;
-  std::vector<std::pair<std::string, size_t>> strings;
-  strings.reserve(n);
+  s.reserve(n);
 
-  for (size_t i = 0; i < n; i++) {
+  for (int i = 0; i < n; i++) {
     std::string tmp;
     std::cin >> tmp;
-    strings.emplace_back(std::make_pair(tmp, tmp.size()));
+    s.emplace_back(tmp);
   }
 
-  std::stable_sort(strings.begin(), strings.end(), compareBySize);
-  for (size_t i = 0; i < n; i++) {
-    std::cout << strings.at(i).first;
+  std::stable_sort(s.begin(), s.end(),
+                   [](const std::string &x, const std::string &y) {
+                     return x.size() < y.size();
+                   });
+
+  std::string ans;
+  for (const auto &str : s) {
+    ans += str;
   }
-  std::cout << std::endl;
-  return (0);
+
+  std::cout << ans << '\n';
+  return 0;
 }
